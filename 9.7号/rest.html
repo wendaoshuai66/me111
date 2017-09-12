@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>回调函数</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script>
+	/*
+	把数组转换为字符串
+	arr[i]+'-'
+	参数：
+	arr:特定数组
+	str:连接符
+	 */
+	var arr=[1,2,3,4,5,6,7,8,9];
+	function join(arr,str){
+		str=str==undefined?'-':str
+		var result='';
+		
+		for(var i=0;i<arr.length;i++){
+			if(i<arr.length-1){
+			result=arr[i]+str+result;
+		}else{
+		result=result+arr[i];
+	}
+	}
+		return result;
+	
+	}
+	var result1=join(arr,'=');
+	document.write(result1);
+	/*
+	筛选数组的偶数
+	filter(arr)
+	 */
+	function filter(arr,fn){
+		var newarr=[];
+		for(var i=0;i<arr.length;i++){
+			if(fn(arr[i])){
+				newarr[newarr.length]=arr[i];
+			}
+		}
+		return newarr;
+	}
+	var result=filter(arr,function(value){
+		return value%2==0;
+	})
+	console.log(result);
+	/*
+	四则运算
+	 */
+	function aa(num1,mum2){
+		return num1*2-num1
+	}
+	function bb(num1,mum2){
+		return num1*5+num1
+	}
+	function cc(num1,mum2){
+		return num1*2/num1
+	}
+	function math(num1,num2,fn){
+		return fn(num1,num2);
+	}
+	var result=math(2,3,aa);
+	alert(result);
+	/*
+	映射
+	map(arr,function(value){
+	
+	})
+	把数组中的数据二倍
+	回调函数
+	}
+
+	 */
+	function map(arr,fn){
+		var newarr=[];
+		for(var i=0;i<arr.length;i++){
+			newarr[newarr.length]=fn(arr[i]);
+		}
+		return newarr;
+	}
+	var result=map(arr,value=>{
+       return value*2; 	
+	})
+	console.log(result);
+
+</script>

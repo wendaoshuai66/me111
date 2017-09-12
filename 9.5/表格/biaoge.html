@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script>
+	document.write('<table border=1 cellspacing=0 cellpadding=5 align=center width=1000>');
+	var z=prompt('请输入行数', 10);
+	for(var j=1 ; j<=z ;j++){
+		if(j%2==0){
+			document.write('<tr bgcolor=yellow>');
+		}/*else{
+			document.write('<tr bgcolor=blue> ');
+		}*/
+		// document.write('<tr>')
+		for(var i=1; i<=10;i++){
+			if(i%2==0){
+			document.write('<td bgcolor=red>'+j+'-'+i+'</td>');
+		}else{
+			document.write('<td >'+j+'-'+i+'</td>');
+		}
+			/*document.write('<td>'+j+'-'+i+'</td>');*/
+		}
+		document.write('</tr>');
+	}
+	document.write('</table>');
+	document.write('<table border=1 cellspacing=0 cellpadding=5 align=center width=1000>')
+	for(var j=1 ; j<=9 ;j++ ){
+		document.write('<tr align=center>');
+		if(j%2==0){
+			document.write('<tr align=center bgcolor=green>');
+		}/*else{
+			document.write('<tr align=center bgcolor=yellow>');
+		}*/
+		for(var i=1; i<=j;i++){
+			if(i%2==0){
+				document.write('<td bgcolor=red>'+i+'*'+j+'='+i*j+'</td>');
+			}else{
+				document.write('<td bg=pink>'+i+'*'+j+'='+i*j+'</td>');
+			}
+		}
+		document.write('</tr>');
+	}
+	document.write('</table>');
+</script>

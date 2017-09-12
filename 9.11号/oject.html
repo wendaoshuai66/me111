@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>object</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script>
+	/*
+	对象的创建
+	添加属性
+	访问
+	 */
+	// json创建
+	/*let zhangsan={};
+	alert(typeof zhangsan);*/
+	// 通过构造函数创建
+	function person() {
+		// body...
+	}
+	let zhangsan=new person();
+	let lisi=new person();
+	alert(zhangsan);
+	zhangsan.name='zhangsan';
+	zhangsan.age=18;
+	alert(zhangsan.name);
+	alert(zhangsan.age);
+	lisi.classes='1406班';
+	// 添加方法
+	lisi.say=function(){
+		alter(zhangsan.name);
+	}
+	lisi.sleep=function(){
+		alert('休息')；
+	}
+</script>

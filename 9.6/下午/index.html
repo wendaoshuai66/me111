@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script>
+	/*
+	while循环
+	 */
+/*	var i=1;
+	while(i<=10){
+		console.log(i);
+		i++;
+	}*/
+	/*
+	1~10
+	 */
+	/*for(var i=1;i<=10;i++){
+		if(i%2==1){
+			continue;
+			// break;
+		}
+		console.log(i)
+	}*/
+	/*
+	求二维数组的最大值
+	 */
+	/*
+	1.是否为空
+	2.newarr
+	 */
+	var arr=[1,2,3,4,5, ,6, ,7,8,9];
+	var newarr=[];
+	/*for(var i=0;i<arr.length;i++){
+		if(arr[i]==undefined){
+           continue;
+		}
+       newarr[newarr.length]=arr[i];
+	}
+	  console.log(newarr);*/
+	  /*
+	  根据数据类型
+	   */
+	 for(var i=0;i<=arr.length;i++){
+	 	/*if(arr[i]!=undefined){
+	 		newarr[newarr.length]=arr[i];
+	 	}*/
+	 	if((typeof arr[i]) != 'undefined'){
+	 		newarr[newarr.length]=arr[i];
+	 	}
+	 }
+     console.log(newarr);
+
+     var zhangsan=[97,98,89];
+     var lisi=[92,94,85];
+     var wangwu=[96,95,84];
+     var classes=[zhangsan,lisi,wangwu];
+     var max=classes[1][2];
+    /* console.log(classes[1][2]);*/
+     for(var i=0;i<classes.length;i++){
+     	for(var j=0;j<classes[i].length;j++){
+              if(max<classes[i][j]){
+              	max=classes[i][j];
+              }
+     	}
+     }
+     console.log(max);
+</script>

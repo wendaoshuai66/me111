@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>内置 顶层 函数</title>
+</head>
+<body>
+	<script>
+		/*
+		escape() unescape() Number() String()
+		Boolean() parseInt() parseFloat() isNaN()
+		 */
+		/*let str='张三';
+		console.log(escape(str));
+		console.log(unescape('%u5F20%u4E09')); */
+		// console.log(Number(1230));
+	/*	console.log(Number(false));
+		console.log(Number(null));
+		console.log(Number(undefined));*/
+		/*console.log(Number('abcd'));
+		console.log(Number('true'));*/
+		/*console.log(Boolean([]));
+		console.log(Boolean(function fn(){}));*/
+		console.log(parseInt('1234'))
+		console.log(parseInt('0b1111'))
+		console.log(parseInt('100px'))
+		console.log(parseInt('   -100px200'))
+		console.log(parseInt('acd-100px200'))
+		/*
+		parseInt规则以空格 数字 正负号（+.-）开头第一个数字字符开始，第一个非数字字符结束 ；
+		 */
+		console.log(parseFloat('-100.2px200'));
+		// isNaN() is not a number
+		console.log(isNaN(true));
+		console.log(Number(012));
+		console.log(Number('012'));
+		var num;
+		num=
+		num==undefined ?'x' :num;
+		console.log(num)
+ 	</script>
+</body>
+</html>

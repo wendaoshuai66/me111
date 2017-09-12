@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>闭包.箭头.let.const</title>
+</head>
+<body>
+	<script>
+	/*
+	闭包
+	 */
+		function fn(){
+			var num=10;
+			return fn1;
+		function fn1(){
+				num++;
+				return num;
+			}
+		}
+		var  result=fn();
+		alert(result());
+		/*
+		箭头函数
+		 */
+		/*var fn=function(a){
+			return a;
+		}
+		var fn=a=>a;*/
+		// 当a没有参数加一个括号
+		/*var fn=()=>1;*/
+		// 当参数大于1时加括号
+		// var fn=(a,b)=>a+b;
+		/*var fn=(a,b,c)=>{
+			return a+b+c
+		}*/
+		console.log(fn(2));
+		/*
+		let
+		 */
+		// alert(num1);--------->会出错
+		// 暂时性的死区
+		/*let num1;
+		alert(num1);
+		num1=15;
+		alert(num1);*/
+	/*	var arr=[];
+		for(let i=0;i<10;i++){
+			arr[i]=function (){
+				alert(i);
+			}
+		}
+		arr[1]();*/
+		/*
+		块级作用域
+		 */
+		{
+			let num2=15;
+			alert(num2);
+			{
+				let num2='a';
+				alert(num2);
+			}
+		}
+		num2=16;
+	    alert(num2);
+	</script>
+</body>
+</html>

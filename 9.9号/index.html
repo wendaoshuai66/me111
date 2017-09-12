@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script>
+     var arr=[11,12,31,40,15,16,70,18];
+	/*
+	indexOf
+	首次位置
+	 */
+	function indexOf(arr,num){
+		if(!(typeof num!='object' && arguments.length>1)){
+			return '输入错误';
+		}
+		for(var i=0;i<arr.length;i++){
+			if(arr[i]==num){
+				return i;
+			}
+		}
+		return -1;
+	}
+	var  result=indexOf(arr,15);
+	document.write(result);
+	/*
+	末次位置
+	 */
+	function indexOf(arr,num){
+		if(!(typeof num!='object' && arguments.length>1)){
+			return '输入错误';
+		}
+		for(var i=arr.length-1;i>=0;i--){
+			if(arr[i]==num){
+				return i;
+			}
+		}
+		return -1;
+	}
+	var  result=indexOf(arr,15);
+	document.write(result);
+	/*
+	反转
+	reverse
+	 */
+	function reverse(arr){
+		var newarr=[];
+		for(var i=arr.length-1;i>-1;i--){
+			/*newarr[newarr.length]=arr[i];*/
+			push(newarr,arr[i]);
+		}
+		return newarr;
+	}
+	function push(arr,...rest){
+		for(var i=0;i<rest.length;i++){
+			arr[arr.length]=rest[i];
+		}
+	}
+	var result=reverse(arr);
+	console.log(result);
+	/*
+	万能的删除
+          var arr=[11,12,31,40,15,16,70,18]
+                         2     
+	 */
+	function spliceCancel(arr,pos,num){
+		var newarr=[];
+		for(var i=0;i<arr.length;i++){
+			if(i>=pos && i<pos+num){
+				continue;
+			}
+			newarr[newarr.length]=arr[i];
+		}
+		return newarr;
+	}
+	console.log(spliceCancel(arr,2,2));
+	/*
+	万能的添加
+	apliceAdd
+	 */
+	function spliceAdd(arr,pos,...rest){
+		var newarr=[];
+		for(var i=0;i<pos;i++){
+              newarr[newarr.length]=arr[i];
+		}
+		for(var i=0;i<rest.length;i++){
+			newarr[newarr.length]=rest[i];
+		}
+		for(var i=pos;i<arr.length;i++){
+			newarr[newarr.length]=arr[i];
+		}
+		return newarr;
+	}
+	console.log(spliceAdd(arr,2,'a',50,23,'d',1,2,3));
+	/*
+	splice(arr,2,3);
+	splice(arr,2,3,0,'x','a','d');
+	splice(arr,2,3,3,'x','a','d');
+	万能的添加和删除
+	 */
+	function splice(arr,pos,num,...rest){
+		var newarr=spliceCancel(arr,pos,num);
+		if(rest.length>0){
+			var newarr=spliceAdd(newarr,pos,...rest);
+		}
+		return newarr;
+	}
+	console.log(splice(arr,3,1,'x','a','d'));
+</script>

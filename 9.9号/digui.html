@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>递归</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script>
+/*
+递归函数
+ */
+	function fn(num) {
+		if(num<5){
+			fn(++num);
+		}
+		alert(num)
+		// body...
+	}
+	fn(1);
+	var arr=[1,2,3,4,5,6,7,8,9]
+	/*
+	地址（浅拷贝）
+	 */
+	var arr1=arr;
+	/*
+	传值（深拷贝）
+	 */
+	var arr1=[];
+	for (var i=0;i<arr.length;i++){
+		arr1[arr1.length]=arr[i];
+	}
+	/*
+	数组递归 深拷贝
+	 */
+/*	var arr=[1,2,3,4,5,['x','y','z','a'],6,7,8,9]
+	function copy(arr){
+		var newarr=[];
+		for(var i=0;i<arr.length;i++){
+			if(typeof arr[i]=='object'){
+			newarr[i]=copy(arr[i]);
+		}else{
+			newarr[i]=arr[i];
+		     }
+		}
+		return newarr;
+	}
+	var arr1=copy(arr);
+	arr[4]='a';
+	arr1[4]='b';
+	console.log(arr)*/
+	console.log(arr1)
+</script>

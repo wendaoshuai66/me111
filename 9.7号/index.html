@@ -1,0 +1,88 @@
+,<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script>
+	/*
+	数组存在
+	存再某一个值
+	 */
+	var arr=[11,12,13,5,6];
+	function exist(arr,value){
+		if(!(typeof arr=='object' && arguments.length>1)){
+			return '输入错误';
+		}
+		for(var i=0;i<arr.length;i++){
+			if(arr[i]==value){
+				return true;
+			}
+		}
+		return false;
+	}
+	var result=exist(arr);
+	document.write(result)
+	/*
+	弹出参数
+	 */
+	/* var fn=function(i,j){
+	 	console.log(arguments);
+	 	console.log(arguments.length);*/
+	 	/*console.log(i,j);*/
+	/* }
+	 fn(1,2);
+	fn(1,2,3,4,5,6,7);*/
+	/*
+	在数组的后面添加一个数组元素
+	 */
+	var arr=[11,12,13,5,6];
+	fnn(arr,'a',50,23,'d',1,2,3)
+/*	function fnn(arr){
+		for(var i=1;i<arguments.length;i++){
+			arr[arr.length]=arguments[i];
+		}
+		console.log(arr);
+	}*/
+	function fnn(arr,...value){
+		for(var i=0;i<value.length;i++){
+			arr[arr.length]=value[i];
+		}
+		console.log(arr);
+	}
+	/*
+	sortUp();
+	sortDown();
+
+	 */
+	/*sortUp(arr);
+	sortDown(arr);
+	function sortUp(arr){
+		for(var i=0;i<arr.length;i++){
+			for(var j=i+1;j<arr.length;j++){
+				if(arr[i]>arr[j]){
+					var k=arr[j];
+					arr[j]=arr[i];
+					arr[i]=k;
+				}
+			}
+		}
+		console.log(arr);
+	}
+	function sortDown(arr){
+		for(var i=0;i<arr.length;i++){
+			for(var j=i+1;j<arr.length;j++){
+				if(arr[i]<arr[j]){
+					var k=arr[j];
+					arr[j]=arr[i];
+					arr[i]=k;
+				}
+			}
+		}
+		console.log(arr);
+	}*/
+</script>

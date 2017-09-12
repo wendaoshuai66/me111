@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script>
+	/*var table='<table border=1 cellspacing=0>';
+	var z=prompt('请输入行号', 10);
+	for(var i=1;i<=z;i++){
+		table=table+'<tr>';
+		for(var j=1;j<=(2*i-1);j++){
+			table=table+'<td>'+i+'-'+j+'</td>'
+		}
+		table=table+'</tr>';
+	}
+	document.write(table);
+	var row=prompt('请输入行数',10 );
+	for(var i=1;i<=row;i++){
+		for(var j=1;j<=row-i;j++){
+			document.write('_');
+		}
+		for(var j=1;j<=2*i-1;j++){
+			document.write('*')
+		}
+		document.write('<br/>')
+	}*/
+	/*
+	1 1 2 3 5
+	 */
+	/*var i=1;j=1;m=prompt('请输入范围', 1);
+	document.write(i+'&nbsp');
+	document.write(j+'&nbsp');
+	for(var k=0;k<=m;){
+		k=i+j;
+		document.write(k+'&nbsp');
+		i=j;
+		j=k;
+	}*/
+	/*
+	var math=90,chinese=95,eng=70;
+	 */
+	var array=[90,95,70,60,59,78,88];
+	/*console.log(array);
+	var max=[90];
+	for(var i=0;i<=array.length-1;i++){
+		if(max<array[i]){
+			max=array[i];
+		}
+	}
+	console.log(max);*/
+	for(var i=0;i<array.length;i++){
+		for(var j=i+1;j<array.length;j++){
+			if(array[i]>array[j]){
+				var temp=array[i];
+				array[i]=array[j];
+				array[j]=temp;
+			}
+		}
+	}
+	console.log(array);
+</script>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+</body>
+</html>
+<script>
+	/*
+	任意行任意列————————》形参（rows cols）————————》实参
+	 */
+	function fn(rows,cols) {
+		var table='<table border=1 cellspacing=0>';
+		for(var i=1;i<=rows;i++){
+			table=table+'<tr>';
+			for(var j=1;j<=cols;j++){
+				table=table+'<td>'+i+'-'+j+'</td>'
+			}
+		}
+		table+='</table>';
+		document.write(table);
+	}
+	fn(10,5);
+	/*
+	任意数组最大值
+	 */
+	arry=[
+	[1,2,3,4,5,6],
+	[11,20,23,34,15,6],
+	[16,22,34,44,58,56],
+	]
+	arr(arry);
+	function arr(classes) {
+		var max=classes[0][0];
+    /* console.log(classes[1][2]);*/
+     for(var i=0;i<classes.length;i++){
+     	for(var j=0;j<classes[i].length;j++){
+              if(max<classes[i][j]){
+              	max=classes[i][j];
+              }
+     	}
+     }
+     console.log(max);
+		// body...
+	}
+	function fnn(x){
+			for(var i=1;i<=x;i++){
+		for(var j=1;j<x-i;j++){
+			document.write('_')
+		}
+		for(var j=1;j<=2*i-1;j++){
+			document.write('*')
+		}
+		document.write('<br/>')
+	}
+	    for(var i=1;i<=x;i++){
+		for(var j=1;j<=i-1;j++){
+			document.write('_')
+		}
+		for(var j=1;j<=2*x-2*i-1;j++){
+			document.write('*')
+		}
+		document.write('<br/>')
+	}
+	}
+	fnn(20);
+	var zhangsan=[80,75,89,45,66,88,81]
+
+	for(var i=0;i<=zhangsan.length-1;i++){
+		for(var j=i+1;j<=zhangsan.length-1;j++){
+			if(zhangsan[i]>zhangsan[j]){
+				var k=zhangsan[j];
+				zhangsan[j]=zhangsan[i];
+				zhangsan[i]=k;
+			}
+		}
+	}
+	console.log(zhangsan);
+</script>
